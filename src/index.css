@@ -1,0 +1,32 @@
+.loader-parent{
+  display: flex;
+  justify-content: center;align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.loader {
+  height: 64px;
+  aspect-ratio: 1.5;
+  display: flex;
+  gap: 8px;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  border: 8px solid #BD1550;
+  border-radius: 50%;
+  box-sizing: content-box;
+  margin: auto;
+  aspect-ratio: 1;
+  animation: l9 infinite 1s steps(4,jump-none);
+}
+.loader:after {
+  animation-direction: reverse;
+}
+@keyframes l9 {
+  0% {width: 0% }
+  to {width: 75%}
+}
